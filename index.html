@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xphoenix - Search Engine</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/search-functionality.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Xphoenix - A powerful search engine with a clean and intuitive interface">
+    <meta name="theme-color" content="#4285f4">
+    <!-- Google Custom Search Engine Script -->
+    <script async src="https://cse.google.com/cse.js?cx=40ddcf9d12b97499f"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <div class="mode-toggle">
+        <button id="mode-toggle-button">Switch to Light Mode</button>
+    </div>
+    <div class="container">
+        <div class="search-container">
+            <div class="logo">
+                <h1>Xphoenix</h1>
+            </div>
+            <!-- Custom Search Box -->
+            <div class="custom-search-box">
+                <input type="text" id="search-input" placeholder="Type your search here..." />
+                <button id="search-button">
+                    <i class="fas fa-search"></i> Search
+                </button>
+                <button id="image-search-button">
+                    <i class="fas fa-image"></i> Image Search
+                </button>
+            </div>
+        </div>
+        <div class="results-container" id="results-container">
+            <p class="placeholder">Your search results will appear here...</p>
+        </div>
+        <div class="pagination">
+            <button id="prev-page" onclick="loadPreviousPage()">Previous</button>
+            <button id="next-page" onclick="loadNextPage()">Next</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">  
+            <p>beta version</p>
+        </div>
+    </footer>
+    <script src="js/search-api.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        const welcomeMessage = document.getElementById('welcome-message');
+        if (welcomeMessage) {
+            welcomeMessage.style.display = 'none'; // Hide welcome message
+        }
+    </script>
+</body>
+</html>
